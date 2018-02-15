@@ -8,9 +8,11 @@
     <h1>Wellcome home!</h1>
     <h2>Latest Posts</h2>
     {% for post in posts.all%}
-    {{post.title}}
+    {{post.id}}
     <br>
     {{post.pub_date_pretty}}
+    <br>
+    <img src="{{post.image.url}}" alt="">
     <br>
     {{post.summary}}
     <br>
