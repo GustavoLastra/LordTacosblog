@@ -8,13 +8,13 @@
     <h1>Wellcome home!</h1>
     <h2>Latest Posts</h2>
     {% for post in posts.all%}
-    {{post.id}}
+    <a href="{% url 'post_details' post.id %}">{{post.title}}</a>
     <br>
     {{post.pub_date_pretty}}
     <br>
     <img src="{{post.image.url}}" alt="">
     <br>
-    {{post.summary}}
+    {{post.body}}
     <br>
     <br>
     {% endfor %}
